@@ -179,7 +179,7 @@ bot.on('message', async (msg) => {
 ${transferTx ? 
 `• Token berhasil dikirim ke wallet Anda.
  • TX HASH ID: ${transferTx.transactionHash}
- • Link: https://explorer-sepolia.inkonchain.com/tx/${transferTx.transactionHash}` : 
+ • Lihat Detail Transaksi: https://explorer-sepolia.inkonchain.com/tx/${transferTx.transactionHash}` : 
 `• Gagal mengirim token ke alamat Anda.`}
 
 ===================================
@@ -279,7 +279,7 @@ bot.sendMessage(chatId, message);
 • Jumlah Token Dikirim: ${amount} ${tokenName}
 • Wallet Penerima: ${wallet}
 • TX HASH: ${tx.transactionHash}
-• Link Transaksi: https://explorer-sepolia.inkonchain.com/tx/${tx.transactionHash}
+• Lihat Detail Transaksi: https://explorer-sepolia.inkonchain.com/tx/${tx.transactionHash}
 
 ===================================
                                     `, { parse_mode: 'Markdown' });
@@ -397,7 +397,7 @@ async function fetchTransactionCount(chatId) {
 • Alamat Pengguna: ${senderAddress}
 • Total Transaksi: ${transactionCount}
 • Status: ${transactionCount > 0 ? 'Ada Transaksi' : 'Belum Ada Transaksi'}
-• Link Jumlah Transaksi: https://explorer-sepolia.inkonchain.com/address/${senderAddress}?tab=txs
+• Lihat Detail Transaksi: https://explorer-sepolia.inkonchain.com/address/${senderAddress}?tab=txs
 
 ===================================
 `);
@@ -430,7 +430,7 @@ async function bridgeSepoliaToInk(amount, chatId) {
 • Transaksi Bridge Berhasil!
 • Jumlah Sepolia yang Dibridge: ${amountString}
 • TX HASH: ${receipt.transactionHash}
-• Link Transaksi: https://sepolia.etherscan.io/tx/${receipt.transactionHash}
+• Lihat Detail Transaksi: https://sepolia.etherscan.io/tx/${receipt.transactionHash}
 
 ===================================
 `);
@@ -464,7 +464,7 @@ async function bridgeInkToSepolia(amount, chatId) {
 • Proses Bridge Sukses!
 • Jumlah Ink yang Dibridge: ${amountString}
 • TX HASH: ${receipt.transactionHash}
-• Lihat Transaksi di Sepolia: https://explorer-sepolia.inkonchain.com/tx/${receipt.transactionHash}
+• Lihat Detail Transaksi: https://explorer-sepolia.inkonchain.com/tx/${receipt.transactionHash}
 
 ===================================
 `);
